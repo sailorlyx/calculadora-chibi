@@ -1,51 +1,45 @@
 ﻿using System;
 class calculadora
 {
-    static void Main() {
+    static void Main()
+    {
+        double numerito1;
+        Console.WriteLine("¡bienvenido a la mini calculadora! dime un numerito, porfi");
+        numerito1 = Convert.ToDouble(
+            Console.ReadLine());
+
+        double numerito2;
+        Console.WriteLine("dime otro numerito, porfi");
+        numerito2 = Convert.ToDouble(
+            Console.ReadLine());
+
         Console.WriteLine("¿qué operación te gustaría realizar");
         Console.WriteLine("pulsa 1 para suma");
-        Cconsole.WriteLine("pulsa 2 para resta");
+        Console.WriteLine("pulsa 2 para resta");
         Console.WriteLine("pulsa 3 para multiplicación");
         Console.WriteLine("pulsa 4 para división");
 
-        int suma;
-        int resta;
-        int multi;
-        int division;
-
-        int numerito1;
-            Console.WriteLine("dime un numerito");
-        numerito1 = Convert.ToInt32(
-            Console.ReadLine());
-
-        int numerito2;
-            Console.WriteLine("dime otro numerito");
-        numerito2 = ConvertToInt32(
-            Console.ReadLine());
-
-        int total = 0;
-
-        switch {
-            case 1:
-                result = suma(numerito1+numerito2)
+        switch (Console.ReadLine())
+        {
+            case "1":
+                Console.WriteLine("el total es " + (numerito1 + numerito2));
                 break;
 
-            case 2:
-                    result = resta(numerito1 - numerito2)
+            case "2":
+                Console.WriteLine("el total es " + (numerito1 - numerito2));
                 break;
 
-            case 3:
-                result = multi(numerito1*numerito2)
+            case "3":
+                Console.WriteLine("el total es " + (numerito1 * numerito2));
                 break;
 
-            case 4:
-                result = division(numerito1/numerito2)
+            case "4":
+                Console.WriteLine("el total es " + (numerito1 / numerito2));
                 break;
-                }
-          default:
-            Console.WriteLine("no puedes dejar esto en blanco :(");
+
+            default:
+                Console.WriteLine("ha habido un error, intentalo de nuevo!");
                 break;
+        }
     }
-           Console.WriteLine("el resultado de la operación es {0}", total);
-            
 }
